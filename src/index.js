@@ -10,13 +10,15 @@ easyvk({
     fields: 'status',
     reauth: true,
 }).then(async vk => {
-    const { user_id, first_name, last_name, status } = vk.session;
     const statusLeftDay = initStatusLeftDay(new Date(2020, 4, 13));
     const newStatus = statusLeftDay.getStatus('_', '&#10084;', '&#128694;');
 
+    log('Устанавливаем новый статус...');
     await vk.call('account.saveProfileInfo', {
         status: newStatus,
     });
+    log('Новый статус: ', chalk.bold.blue(newStatus));
+
 }).catch(err => {
     console.error(err);
 })
