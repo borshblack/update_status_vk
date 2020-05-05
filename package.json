@@ -1,0 +1,23 @@
+{
+  "name": "updated-status-vk",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "babel-node ./src/index.js",
+    "build": "npx babel ./src/index.js --out-dir dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.6",
+    "chalk": "^4.0.0",
+    "dotenv": "^8.2.0",
+    "easyvk": "^2.7.1",
+    "express": "^4.17.1"
+  }
+}
